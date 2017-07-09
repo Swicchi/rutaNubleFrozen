@@ -1,0 +1,11 @@
+com\usuario\frozen\web\rutanuble\servicios\CajeroService.class
+com\usuario\frozen\web\rutanuble\controladores\CajeroController.class
+com\usuario\frozen\web\rutanuble\dao\CajeroDao.class
+com\usuario\frozen\web\rutanuble\servicios\UserViewModel.class
+com\usuario\frozen\web\rutanuble\entidades\Vehiculo.class
+com\usuario\frozen\web\rutanuble\entidades\Trabaja.class
+com\usuario\frozen\web\rutanuble\entidades\Usuario.class
+com\usuario\frozen\web\rutanuble\entidades\TipoVehiculo.class
+com\usuario\frozen\web\rutanuble\entidades\Cajero.class
+com\usuario\frozen\web\rutanuble\entidades\Portico.class
+com\usuario\frozen\web\rutanuble\entidades\Administrador.class

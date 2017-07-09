@@ -1,22 +1,39 @@
 package com.usuario.frozen.web.rutanuble.entidades;
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="Usuario")
 public class Usuario {
+	@Id
+	@Column(name="rut")
     private int rutNumero;
-    private int rutDigitoV;
+	@Column(name="nombre")
     private String nombre;
+	@Column(name="apellidoPaterno")
     private String apellidoPaterno;
+	@Column(name="apellidoMaterno")
     private String apellidoMaterno;
+	@Column(name="email")
     private String email;
+	@Column(name="domicilio")
     private String domicilio;
+	@Column(name="clave")
     private String contrasena;
+	@Column(name="numeroTelefonico")
     private int numeroTelefonico;
-    private boolean estado;
+	@Column(name="estado")
+    private int estado;
+	@Column(name="tipoUsuario")
+    private String tipoUsuario;
     
-	public Usuario(int rutNumero, int rutDigitoV, String nombre, String apellidoPaterno, String apellidoMaterno,
-			String email, String domicilio, String contrasena, int numeroTelefonico, boolean estado) {
 	
+	public Usuario(int rutNumero, String nombre, String apellidoPaterno, String apellidoMaterno, String email,
+			String domicilio, String contrasena, int numeroTelefonico, int estado, String tipoUsuario) {
+		
 		this.rutNumero = rutNumero;
-		this.rutDigitoV = rutDigitoV;
 		this.nombre = nombre;
 		this.apellidoPaterno = apellidoPaterno;
 		this.apellidoMaterno = apellidoMaterno;
@@ -25,8 +42,7 @@ public class Usuario {
 		this.contrasena = contrasena;
 		this.numeroTelefonico = numeroTelefonico;
 		this.estado = estado;
-	}
-	public Usuario() {
+		this.tipoUsuario = tipoUsuario;
 	}
 	public int getRutNumero() {
 		return rutNumero;
@@ -34,12 +50,7 @@ public class Usuario {
 	public void setRutNumero(int rutNumero) {
 		this.rutNumero = rutNumero;
 	}
-	public int getRutDigitoV() {
-		return rutDigitoV;
-	}
-	public void setRutDigitoV(int rutDigitoV) {
-		this.rutDigitoV = rutDigitoV;
-	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -82,12 +93,18 @@ public class Usuario {
 	public void setNumeroTelefonico(int numeroTelefonico) {
 		this.numeroTelefonico = numeroTelefonico;
 	}
-	public boolean isEstado() {
+	public int getEstado() {
 		return estado;
 	}
-	public void setEstado(boolean estado) {
+	public void setEstado(int estado) {
 		this.estado = estado;
 	}
-    
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
+	
     
 }
